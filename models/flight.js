@@ -4,11 +4,14 @@ const Schema = mongoose.Schema
 
 const destinationSchema = new Schema ({
     airport: {
-        type: String
+        type: String, 
+        enum: ['AUS', 'DFW', 'DEN', 'LAX', 'SAN']
     }, 
     arrival: {
         type: Date
     }
+}, {
+    timestamps: true
 })
 
 const flightSchema = new Schema ({
@@ -38,7 +41,8 @@ const flightSchema = new Schema ({
             // const departYear = today.setFullYear(nextYear)   
             // return departYear
         }
-    }
+    }, 
+    destinations: [destinationSchema]
 }, {
     timestamps: true
 })
