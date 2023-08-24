@@ -21,5 +21,6 @@ async function create(req, res) {
         res.redirect(`/flights/${req.params.id}`)
     } catch (err) {
         console.log(err)
+        res.redirect(`/flights/${req.params.id}/tickets/new`)
     } 
 }

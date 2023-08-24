@@ -48,7 +48,7 @@
   <% } %>
 
 
-  <!-- rememeber need to still add the feature to viwe the tickets on this page -->
+ 
   <table>
       <thead>
           <th>Seat</th>
@@ -56,10 +56,10 @@
         </thead>
         <tbody>
  
-            <% tickets.forEach(function(t) { %> <!--???????????-->
+            <% tickets.forEach(function(t) { %> 
                 <tr>
                     <td><%=t.seat%></td>
-                    <td><%=t.price%></td>
+                    <td>$<%=t.price%></td>
                 </tr>
             <% }) %>
 

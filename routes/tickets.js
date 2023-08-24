@@ -5,7 +5,7 @@ const ticketsCtrl = require('../controllers/tickets')
 // still need to mount and make controller 
 
 router.get('/flights/:id/tickets/new', ticketsCtrl.new)
-router.post('/:id/tickets', ticketsCtrl.create)
+router.post('/flights/:id/tickets', ticketsCtrl.create)
 
 
 module.exports = router
